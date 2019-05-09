@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="black">#000000</color>
+    <color name="nav_header">#fd5000</color>
+    <color name="nav_footer">#fd5000</color>
+    <color name="toolbar_title">#fd5000</color>
 </resources>

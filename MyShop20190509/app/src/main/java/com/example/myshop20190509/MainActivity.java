@@ -69,9 +69,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.nav_account:
                         Log.i(TAG, "onNavigationItemSelected: account");
-                        Intent signInAndUp=new Intent(MainActivity.this,
-                                LoginActivity.class);
-                        startActivity(signInAndUp);
+                       // Intent signInAndUp=new Intent(MainActivity.this, LoginActivity.class);
+                        Intent signInAndUp=new Intent(MainActivity.this, SignInAndUpActivity.class);
+                       // startActivityForResult(signInAndUp,3);
+                       startActivity(signInAndUp);
                         break;
                     case R.id.nav_cart:
                         Log.i(TAG, "onNavigationItemSelected: cart");
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
         //实例化view
         initView();
+
     }
     private void initView(){
         mTabLayout=findViewById(R.id.tablayout);

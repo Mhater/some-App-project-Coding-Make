@@ -1,0 +1,39 @@
+package com.example.myshop20190509.Adapter;
+
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+
+import java.util.List;
+
+public class LoginFragmentAdapter  extends FragmentStatePagerAdapter {
+    private List<Fragment> mFragments;
+    private List <String> mTitles;
+
+
+    public LoginFragmentAdapter(FragmentManager fm
+            ,List<Fragment> fragments
+            , List<String>titles) {
+        super(fm);
+        mFragments=fragments;
+        mTitles=titles;
+
+    }
+
+    @Override
+    public Fragment getItem(int i) {
+        return mFragments.get(i);
+    }
+
+    @Override
+    public int getCount() {
+        return mFragments==null?0:mFragments.size();
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return mTitles.get(position);
+    }
+}

@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SignInAndUpActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/sign_toolbar"
+        android:background="#ffffff"
+        app:titleTextColor="@color/toolbar_title"
+        app:title="SIGN IN OR UP"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/icon_turn_back"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+
+        >
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.TabLayout
+
+        android:layout_gravity="bottom"
+        android:id="@+id/sign_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#c1fdff"
+        app:tabSelectedTextColor="@color/black"
+        app:tabIndicatorColor="#005555"
+        app:tabIndicatorHeight="5dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+
+        >
+
+
+
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/sign_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
